@@ -14,13 +14,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Academy Furniture and Supply Blog
+header-img: img/home-bg.jpg
 email: info@academyfurn.com
 description: > # this means to ignore newlines until "baseurl:"
   Keeping you updated on the current news in Educator Furniture and Development.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://secure-peak-30091.herokuapp.com/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: academyfurn
 github_username:  academyfurn
+facebook_username:  ouracad
+email_username:  info@academyfurn.com
+copyright_name: Academy Furniture and Supplies
 sass:
   sass_dir: _sass
   style: :compressed
@@ -30,11 +34,12 @@ links:
 
 # Build settings
 markdown: kramdown
-theme: minima
+highlighter: rouge
+permalink: pretty
+paginate: 5
+
+theme: minima # this doesnt need to be included
 gems:
   - jekyll-feed
-exclude:
-  - config.ru
-  - Gemfile
-  - Gemfile.lock
-  - vendor
+  - jekyll-paginate
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","config.ru","Gemfile","Gemfile.lock","vendor"]
