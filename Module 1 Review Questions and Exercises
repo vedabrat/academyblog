@@ -1,0 +1,272 @@
+# Module 1 Review Questions and Exercises
+
+## Instructions
+
+1. Hit Raw in the top right corner.
+2. Copy and paste the output into your own gist.
+2. Fill in your answers below each question.
+3. Save your changes in your own gist and send a link to me!
+
+## HTML
+
+### Questions
+
+1. What is HTML and what is it used for?
+html is the non responsive framework that is essentially the skeleton for your site. it creates the layout. tables. headers, text, and more
+2. What is the difference between an ID and a class?
+An id is something used to target a specific element. class is when you want to tag multiple elements for editing
+3. What does it mean to write "semantic" HTML?
+essentially following the basic structure that most sites follow. its the use of the appropritate tags that clearly define their content.
+
+### Exercises
+
+1. Write a paragraph tag with a class of "highlight" and content "Watch out!".
+<p class="highlight">Watch out!</p>
+2. Write an HTML image tag to show an image called `profile-picture.jpg`.
+<img src= "profile-picture.jpg"> </img>
+3. Write a link tag that links to http://google.com.
+<a href="http://google.com">google</a>
+5. Write an complete standard HTML document outline (including a DOCTYPE, and `<html>`, `<head>`, and `<body>` tags).
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>im sick</title>
+  <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+<ol> the handmaids tale
+<br> frankenstein
+<br> cant think of another one right now
+  <script src="main.js"></script>
+</body>
+</html>
+
+6. Inside of the code for the previous exercise, write the appropriate tag to link to a script file called `main.js`.
+
+7. Inside of the code for the previous exercise, write the appropriate tag to link to a stylesheet file called `main.css`.
+
+8. Write a numbered list in HTML and list three of your favorite books.
+
+9. Fix the indentation of the following HTML sample:
+
+  ```html
+    <div>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+  ```
+
+## CSS
+
+### Questions
+
+1. What is CSS and what is it used for?
+cascading sheet styling. to style the page and its elements
+2. What is the CSS box model?
+margins borders and padding. each element has them and they essentially create a box around the content
+3. What's the difference between margin and padding?
+padding is all around the entire piece, and margin is the space between the content and the border
+
+### Exercises
+
+1. Write a CSS rule to make the text of all `h1` tags red.
+h1 {
+  color:red;
+}
+2. Write a CSS rule to make the background color of the link with `class="btn"` blue:
+
+  ```html
+  <a href="#" class="btn">Learn more</a>
+  ```
+  ahref.btn {
+    color:blue ;
+  }
+
+3. Write a CSS rule to give the first paragraph in the following HTML a font size of `20px`, but not the second paragraph.
+
+  ```html
+  <header class="jumbotron">
+    <p>Hello, World!</p>
+  </header>
+
+  <p>Welcome to this awesome website!</p>
+  ```
+header.jumbotron {
+  font-size: 20 px;
+}
+## JavaScript
+
+### Questions
+
+1. What is a function? What are they used for?
+functions transform inputted data and manipulate them as needed. when called, they're used to make your page responsive
+2. What is the difference between `==` and `===`?
+compare and strictly equals
+3. What is the difference between global and local scope variables?
+global is accessed anytime, local is accessed in specific parts of your code, like within a loop 
+4. What is a boolean value?
+true or false
+5. What is an array?
+a set of data pieces inside [] with indexes.
+
+### Exercises
+
+1. Write a line that declares a variable called `myName` and set its value to your name.
+var myname = "vedabrat A Etwrau"
+2. Write a loop that logs the numbers 1 through 10 to the console.
+for (var i = 1; i<11; i++){
+  console.log(i);
+}
+3. Translate the following pseudocode into JavaScript: if `score` is greater than `3` and `lives` is greater than `0`, alert "You win!".
+var score = 0;
+var lives = 0;
+// something affects scores and lives
+if (score > 3 && lives > 0){
+  alert("You Win!")
+}
+4. Write a function `sayHello` that takes one argument, a name, and logs "Hello, <name>!" to the console. Then, call the function below the function definition and pass in your name as the argument.
+function sayHello(name){
+  console.log("Hello "+ name);
+}
+sayHello(name);
+
+
+
+5. What would the following script log to the console?
+
+  ```javascript
+  var currentSong = "Call Me Maybe";
+
+  function setSong(song) {
+    currentSong = song;
+  }
+
+  setSong("Friday, Friday");
+
+  console.log(currentSong);
+  ```
+  Friday, Friday
+
+6. What would the following script log to the console?
+
+  ```javascript
+  var add = function(a, b) {
+    return a + b;
+  }
+
+  var result = add(3, 7);
+
+  console.log(result);
+  ```
+10
+7. What would the following script log to the console?
+
+  ```javascript
+  var helloGoodbye = function(name) {
+    return sayHello(name) + " " + sayGoodbye(name);
+  }
+
+  var sayHello = function(name) {
+    return "Hello " + name " !";
+  }
+
+  var sayGoodbye = function(name) {
+    return "Goodbye " + name " !";
+  }
+
+  console.log(helloGoodbye("Sarah"));
+  ```
+hello sarah goodbye sarah
+
+8. Write a function `findLongestWord()` that takes an array of words and returns the length of the longest one.
+function findLongestWord(array){
+ var a = "";
+ var b = 0;
+ for (var i = 0;i<array.length;i++){
+  if (array[i].length>b){
+  array[i].length = b;
+  array[i] = a;
+  }
+ } return b;
+}
+9. Define a function `sum()` that sums all the numbers in an array of numbers. For example, `sum([1,2,3,4])` should return 10.
+
+function sum(array){
+var add = 0;
+  for(var i = 0; i <array.length;i++){
+    array[i] += add;
+  } return add;
+}
+
+10. Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
+
+function something(letter){
+var a = [a,e,i,o,u];
+  for (var i = 0; i<a.length;i++ ){
+    if (a[i] == letter)
+    return true;
+  }
+
+}
+
+11. Write the correct line to make `"Woof!"` show up in the console based on this script:
+
+  ```javascript
+  var pet = {
+    name: "Charles",
+    goodDog: true,
+    speak: function() {
+      console.log("Woof!");
+    }
+  };
+
+  pet.speak;
+  ```
+
+12. Using the same script as above, write the correct line to log the dog's name to the console.
+console.log(pet.name);
+## Command Line
+
+### Questions
+
+1. What is the command line and what is it used for?
+navigation and creation of files. executing commands.
+2. What does the command `ls` do?
+lists all files in the current directory
+3. What does the command `pwd` do?
+tells you the present working directory
+4. What does the following command do: `cd my-cool-project`
+changes to the folder my-cool-project
+### Exercises
+
+1. Write the command to make a new directory called "my-cool-project".
+mkdir my-cool-project
+
+2. Write the command to create a file called "index.html".
+ touch index.html
+3. Write the command to delete a file called "main.css".
+rm main.css
+## Git
+
+### Questions
+
+1. What is Git and what is it used for?
+version control system
+2. What's the difference between a local repository and a remote repository?
+ones on your computer, the other's on the server
+### Exercises
+
+1. Write the command that you would use to create a new local Git repository.
+git init
+2. Write the command to stage a file called `index.html` to be committed.
+git add index.html
+3. Write the command to view the current status of the git repository.
+git status
